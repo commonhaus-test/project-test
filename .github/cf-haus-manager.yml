@@ -8,7 +8,7 @@ gitHubResources: github-resources.yml
 # Add users from the specified source team as collaborators
 # to the repository containing this file.
 teamAccess:
-  source: commonhaus-test/team-quorum-default
+  source: commonhaus/test-quorum-default 
   # ignore the presence/absence of these logins
   ignoreUsers:
     - botLogin
