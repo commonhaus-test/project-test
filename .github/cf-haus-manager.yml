@@ -1,5 +1,5 @@
 enabled: true
-dryRun: true
+dryRun: false
 
 # Reference to YAML file in the same repository
 # as this config file
