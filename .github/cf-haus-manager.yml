@@ -1,10 +1,6 @@
 enabled: true
 dryRun: false
 
-# Reference to YAML file in the same repository
-# as this config file
-gitHubResources: github-resources.yml
-
 # Add users from the specified source team as collaborators
 # to the repository containing this file.
 collaboratorSync:
@@ -15,6 +11,23 @@ collaboratorSync:
   # ignore the presence/absence of these logins
   ignoreUsers:
     - botLogin
+
+# Project Health Monitoring Configuration
+projectHealth:
+  # Project maturity level for foundation oversight
+  maturity: mature  # early, mature, experimental, deprecated
+  
+  # Organizations and repositories to monitor
+  organizationRepositories:
+
+    commonhaus:
+      dryRun: false
+      includes:
+        - foundation
+
+    quarkusio:
+      includes:
+        - quarkus
 
 emailNotifications:
   errors:
