@@ -19,6 +19,6 @@ jobs:
       
       - uses: commonhaus/vote-record-actions/actions/store-health-report@main
         with:
-          reports: ${{ github.event.client_payload.reports }}
+          reports: ${{ ioJson(github.event.client_payload.reports) }}
           start_date: ${{ github.event.client_payload.start_date }}
           report_directory: 'reports'
