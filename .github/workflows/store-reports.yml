@@ -11,10 +11,14 @@ jobs:
 
     steps:
 
-    - uses: actions/checkout@v4
-    
-    - uses: commonhaus/vote-record-actions/actions/store-health-report@main
-      with:
-        reports: ${{ github.event.client_payload.reports }}
-        start_date: ${{ github.event.client_payload.start_date }}
-        report_directory: 'reports'
+      - uses: actions/checkout@v4
+
+      - run: 'echo "start_date: ${{ github.event.client_payload.start_date }}"'
+      - run: 'echo "reports: ${{ github.event.client_payload.reports }}"'
+      - run: 'echo "payload: ${{ toJson(github.event.client_payload) }}"'
+      
+      - uses: commonhaus/vote-record-actions/actions/store-health-report@main
+        with:
+          reports: ${{ github.event.client_payload.reports }}
+          start_date: ${{ github.event.client_payload.start_date }}
+          report_directory: 'reports'
