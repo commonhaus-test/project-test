@@ -1,0 +1,20 @@
+name: Store Health Reports
+on:
+  repository_dispatch:
+    types: [health-reports]
+
+jobs:
+  store-reports:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+
+    - uses: actions/checkout@v4
+    
+    - uses: commonhaus/vote-record-actions/actions/store-health-report@main
+      with:
+        reports: ${{ github.event.client_payload.reports }}
+        start_date: ${{ github.event.client_payload.start_date }}
+        report_directory: 'reports'
