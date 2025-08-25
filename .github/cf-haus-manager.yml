@@ -20,14 +20,18 @@ projectHealth:
   # Organizations and repositories to monitor
   organizationRepositories:
 
-    commonhaus:
-      dryRun: false
+    project-test:
       includes:
-        - foundation
+        - automation-test
 
-    quarkusio:
-      includes:
-        - quarkus
+    #commonhaus:
+    #  dryRun: false
+    #  includes:
+    #    - foundation
+
+    #quarkusio:
+    #  includes:
+    #    - quarkus
 
 emailNotifications:
   errors:
