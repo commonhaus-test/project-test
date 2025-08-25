@@ -20,9 +20,10 @@ projectHealth:
   # Organizations and repositories to monitor
   organizationRepositories:
 
-    project-test:
+    commonhaus-test:
       includes:
         - automation-test
+        - project-test
 
     #commonhaus:
     #  dryRun: false
