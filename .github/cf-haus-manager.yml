@@ -6,8 +6,6 @@ dryRun: false
 collaboratorSync:
   role: push
   sourceTeam: commonhaus-test/team-quorum-default
-  includeUsers:
-    - ejamison3
   # ignore the presence/absence of these logins
   ignoreUsers:
     - botLogin
