@@ -5,8 +5,8 @@ dryRun: false
 # to the repository containing this file.
 collaboratorSync:
   role: push
-  source: commonhaus-test/team-quorum-default
-  logins:
+  sourceTeam: commonhaus-test/team-quorum-default
+  includeUsers:
     - ejamison3
   # ignore the presence/absence of these logins
   ignoreUsers:
